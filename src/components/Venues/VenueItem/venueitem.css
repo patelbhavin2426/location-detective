@@ -1,0 +1,24 @@
+.tile {
+    margin: 10px 0;
+    width: 400px;
+    padding: 20px;
+}
+
+.tile a {
+    text-decoration: none;
+}
+
+.tile img {
+    margin-bottom: 8px;
+}
+
+.fas {
+    vertical-align: top;
+}
+
+.fa.fa-thumbs-up {
+    color: mediumseagreen;
+}
+.fa.fa-thumbs-down {
+    color: orange;
+}

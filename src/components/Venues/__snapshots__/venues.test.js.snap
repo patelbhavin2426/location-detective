@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Venue Component ::  should render two items 1`] = `
+<div>
+  <ul
+    className="grid space-around"
+  >
+    <li
+      className="tile bg-light"
+      data-testid="venue11"
+    >
+      <div
+        className="location-name"
+      >
+        <span
+          className="name"
+        >
+          taco bell
+        </span>
+         
+        <span
+          className="fa fa-thumbs-up"
+        >
+           
+        </span>
+      </div>
+      <div>
+        El Paso venue
+      </div>
+    </li>
+    <li
+      className="tile bg-light"
+      data-testid="venue22"
+    >
+      <div
+        className="location-name"
+      >
+        <span
+          className="name"
+        >
+          taco bell-2
+        </span>
+         
+        <span
+          className="fa fa-thumbs-up"
+        >
+           
+        </span>
+      </div>
+      <div>
+        El Paso venue2
+      </div>
+    </li>
+  </ul>
+</div>
+`;

@@ -1,0 +1,229 @@
+
+html, body, #app {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #fffcfc;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.loader {
+    background-image: url("https://media.giphy.com/media/38msMCMSMUK7m/giphy.gif");
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-clear {
+    border: none;
+    background: transparent;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search.space-around {
+    background: white;
+}
+
+
+/* Search fields  */
+form.field {
+    padding: 20px 0 20px 0;
+}
+
+.space-wrapper {
+    flex-basis: 40%;
+}
+input.zipcode-query.form-control {
+    flex-basis: 30%;
+    margin-right: 10px;
+}
+
+input.form-control {
+    height: 50px;
+}
+
+input.search-item.form-control {
+    flex-basis: 70%;
+}
+
+button.Btn.SearchBox-submitBtn {
+    border-radius: 8px;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.header-lg {
+    font-size: 35px;
+    font-weight: 300;
+    margin: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.link {
+    color: rgb(187, 46, 31);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.card-list {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.card-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.card-list svg {
+    margin-right: 10px;
+}
+
+.card-list a {
+    font-weight: 500;
+    color: inherit;
+}
+
+
+.bg-light {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+}
+
+input,
+button,
+.SearchBox:before {
+    padding: .35em .75em;
+    border: none;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+/* LAYOUT */
+.field {
+    display: flex;
+}
+
+button.Btn.SearchBox-submitBtn {
+    margin-left: 12px;
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 500px) {
+
+    .field {
+        flex-direction: column;
+    }
+
+    input,
+    button,
+    .SearchBox:before {
+        padding: .35em .75em;
+        border: none;
+        font-size: 1em;
+        text-decoration: none;
+    }
+
+    input.form-control {
+        height: 150px;
+    }
+
+    .search .field {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .search input.form-control  {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    button.Btn.SearchBox-submitBtn {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+}
+
+.zipcode-query {
+    flex: 1 0 8em;
+}
+
+.SearchBox-submitBtn {
+    flex: 0 0 auto;
+}
+
+.search-field:before {
+    flex: 0 0 2.75em;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zipcode-query {
+    background: #e9e9e9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.zipcode-query:focus {
+    background: white;
+}
+
+.SearchBox-submitBtn {
+    border-radius: 0 2px 2px 0;
+    background: #9792E3;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #EDFFEC;
+}
+
+
+/* Media Queries */

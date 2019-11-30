@@ -1,5 +1,7 @@
-import Nav from './Nav'
+import Venues from './Venues'
+import { VenueItem } from './VenueItem'
 
 export {
-    Nav
+    Venues,
+    VenueItem
 }

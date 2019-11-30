@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Venue Item ::  should render without throwing an error 1`] = `
+<li
+  className="tile bg-light"
+  data-testid="venue1"
+>
+  <div
+    className="location-name"
+  >
+    <span
+      className="name"
+    >
+      item one
+    </span>
+     
+    <span
+      className="fa fa-thumbs-up"
+    >
+       
+    </span>
+  </div>
+  <div>
+    address one
+  </div>
+</li>
+`;
