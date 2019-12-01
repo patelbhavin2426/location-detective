@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component ::  should render search inputs UI 1`] = `
+Array [
+  <div
+    className="search space-around"
+  >
+    <form
+      className="field"
+      role="search"
+    >
+      <div
+        className="space-wrapper"
+      />
+      <input
+        className="zipcode-query form-control"
+        name="zipCode"
+        onChange={[Function]}
+        placeholder="City"
+        type="search"
+        value=""
+      />
+      <input
+        className="search-item form-control"
+        name="searchItem"
+        onChange={[Function]}
+        placeholder="Search Place"
+        type="search"
+        value=""
+      />
+      <button
+        className="btn searchbox-submitbtn"
+        onClick={[Function]}
+      >
+        Search
+      </button>
+      <div
+        className="space-wrapper"
+      />
+    </form>
+  </div>,
+  <div
+    className="place-container"
+  >
+    <div
+      className="resultset"
+    >
+      <div
+        className="loader"
+      />
+    </div>
+  </div>,
+]
+`;

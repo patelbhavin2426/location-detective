@@ -95,7 +95,7 @@ class Search extends Component {
                         <div className="space-wrapper"></div>
                         <input onChange={this.updateZipCode} type="search" className="zipcode-query form-control" name='zipCode' value={this.state.zipCode} placeholder="City" />
                         <input onChange={this.updateSearchItem} type="search" className="search-item form-control" name='searchItem' value={this.state.searchItem} placeholder="Search Place" />
-                        <button className="Btn SearchBox-submitBtn" onClick={this.searchVenues}>Search</button>
+                        <button className="btn searchbox-submitbtn" onClick={this.searchVenues}>Search</button>
                         <div className="space-wrapper"></div>
                     </form>
                 </div>
