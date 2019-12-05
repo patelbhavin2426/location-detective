@@ -66,4 +66,4 @@ If built/compiled successfully the app will run on http://localhost:8080
 
 # Future enhancements
 
-The redux integration is done successfully and it was working. The final changes 
+The redux integration is done successfully and it was working. The final changes do not have the redux piece in working condition.
