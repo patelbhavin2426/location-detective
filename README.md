@@ -12,7 +12,7 @@
     
     You will need to install node modules first. Do the following.
     
-    bpatel:location-detective bpatel$ npm -v 
+    bpatel:location-detective bpatel$ npm install 
 
 # Unit testing 
 
