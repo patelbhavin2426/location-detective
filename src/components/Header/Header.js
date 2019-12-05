@@ -3,7 +3,7 @@ import {Link} from 'react-router'
 
 import styles from './styles.module.css';
 
-
+/* This suppose to be used for Navbar but it's not used right now */
 export class Header extends React.Component {
 
     render() {

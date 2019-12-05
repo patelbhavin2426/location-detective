@@ -54,3 +54,5 @@ exports[`Venue Component ::  should render two items 1`] = `
   </ul>
 </div>
 `;
+
+exports[`Venue Component ::  should render with Sorry message 1`] = `ReactWrapper {}`;

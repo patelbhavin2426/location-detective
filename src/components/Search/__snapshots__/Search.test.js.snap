@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Search Component ::  let's click on search button 1`] = `ReactWrapper {}`;
+
+exports[`Search Component ::  let's click on search button input error cases 1`] = `ReactWrapper {}`;
+
 exports[`Search Component ::  should render search inputs UI 1`] = `
 Array [
   <div
@@ -13,7 +17,7 @@ Array [
         className="space-wrapper"
       />
       <input
-        className="zipcode-query form-control"
+        className="location-query form-control"
         name="zipCode"
         onChange={[Function]}
         placeholder="City"

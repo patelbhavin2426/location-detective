@@ -2,6 +2,12 @@ import React, {Component} from 'react'
 import {VenueItem} from "../Venues/VenueItem";
 
 
+/*
+* This field should be used as a search input field.
+*
+* Currently this is noe being used. This is just a placeholder.
+* */
+
 class SearchInput extends Component {
 
     constructor(props) {

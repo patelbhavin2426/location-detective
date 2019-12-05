@@ -15,7 +15,9 @@ export function fetchPlaces(near,term) {
         '&query='+ term;
 
     return fetch(endPoint)
-        .then((res) => res.json() )
+        .then((res) => {
+            return res.json()
+        })
         .then((data) => {
             if(data.meta.code !== 200) {
                 throw new Error('Please try again later!!');

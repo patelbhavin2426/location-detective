@@ -1,6 +1,12 @@
 import React, {Component} from 'react'
 import './venueitem.css'
 
+/*
+*
+*  This component is create tile for sinlge place/location.
+*
+* */
+
 function VenueItem(props)  {
 
     const {venue : { name, verified, location }, id } = props.item;

@@ -17,7 +17,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "set CI=true && jest --coverage"
   },
   "babel": {
     "presets": [
@@ -25,11 +26,14 @@
       "@babel/preset-react"
     ]
   },
-  "jest":{
-    "moduleNameMapper":{
+  "jest": {
+    "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    }
+    },
+    "setupFiles": [
+      "./setupJest.js"
+    ]
   },
   "dependencies": {
     "enzyme": "^3.10.0",
@@ -46,18 +50,18 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "latest",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
+    "fetch-reply-with": "^1.2.9",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^24.9.0",
+    "identity-obj-proxy": "latest",
+    "jest": "latest",
+    "jest-fetch-mock": "latest",
+    "react-test-renderer": "latest",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1",
-    "react-test-renderer": "^16.12.0",
-    "babel-jest": "latest",
-    "jest": "latest",
-    "react-test-renderer": "latest",
-    "identity-obj-proxy" : "latest"
+    "webpack-dev-server": "^3.2.1"
   }
 }

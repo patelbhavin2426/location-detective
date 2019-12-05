@@ -8,6 +8,13 @@ import {VenueItem} from './VenueItem';
 * import { actions } from '../../actions';
 */
 
+
+/*
+*  This is a wrapper for the list of places.
+*
+*  This component uses VenueItem to create tile for place.
+* */
+
 class Venues extends Component {
 
     constructor(props) {
@@ -18,8 +25,6 @@ class Venues extends Component {
 
         const venues = this.props.venues || [];
         return (<div>
-
-                    {!venues && <div>Search places ..</div> }
 
                     <ul className="grid space-around">
                         {venues.map( ( item,index) => {

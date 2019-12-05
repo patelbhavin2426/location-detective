@@ -10,6 +10,11 @@ import './search.css'
 * import { actions } from '../../actions'
 */
 
+/*
+*  This component allows users to input their search parameters
+*  1st input is for location( city, zipcode)
+*  2nd input is for place, the place can contain simple search like food, wine, water etc...
+* */
 class Search extends Component {
 
     constructor(props) {
@@ -19,17 +24,30 @@ class Search extends Component {
             'searchItem' : '',
             'zipCode':'',
             'venues':null,
-            'error': null
+            'error': null,
+            'inputError': false
         };
 
         this.searchVenues = this.searchVenues.bind(this);
         this.updateSearchItem = this.updateSearchItem.bind(this);
         this.updateZipCode = this.updateZipCode.bind(this);
+
     }
 
     searchVenues(event) {
 
         event.preventDefault();
+
+        if(this.state.zipCode === '' || this.state.searchItem === '' ) {
+            this.setState({
+                'inputError' : true
+            });
+            return;
+        } else {
+            this.setState({
+                'inputError' : false
+            })
+        }
 
         this.setState( {
             'venues':null,
@@ -37,28 +55,24 @@ class Search extends Component {
             'loading' : true
         });
 
-
-        fetchPlaces(this.state.zipCode, this.state.searchItem)
+        return fetchPlaces(this.state.zipCode, this.state.searchItem)
             .then((data) => {
 
-                this.setState({
+                return this.setState({
                     'venues':data,
                     'error': null,
                     'loading' : false
                 });
 
-                // console.log(data);
                 // This is for Redux
                 // this.props.venuesReceived(data);
 
             })
             .catch((error) => {
 
-                console.warn('Error fetching repos: ', error)
-
-                this.setState({
+                return this.setState({
                     venues : null,
-                    error: 'There was an error fetching the locations.',
+                    error: 'Sorry! we had some problem with your request.',
                     'loading' : false
                 })
             });
@@ -85,7 +99,7 @@ class Search extends Component {
 
     render(){
 
-        const {venues, error} = this.state;
+        const {venues, error, inputError} = this.state;
 
         return (
             <React.Fragment>
@@ -93,11 +107,12 @@ class Search extends Component {
                 <div className="search space-around">
                      <form className="field" role="search" >
                         <div className="space-wrapper"></div>
-                        <input onChange={this.updateZipCode} type="search" className="zipcode-query form-control" name='zipCode' value={this.state.zipCode} placeholder="City" />
+                        <input onChange={this.updateZipCode} type="search" className="location-query form-control" name='zipCode' value={this.state.zipCode} placeholder="City" />
                         <input onChange={this.updateSearchItem} type="search" className="search-item form-control" name='searchItem' value={this.state.searchItem} placeholder="Search Place" />
                         <button className="btn searchbox-submitbtn" onClick={this.searchVenues}>Search</button>
                         <div className="space-wrapper"></div>
                     </form>
+                    { inputError && <p className='inputError'>We can't search without your input.</p> }
                 </div>
 
                 <div className="place-container" >
@@ -106,7 +121,7 @@ class Search extends Component {
                         <div className={"loader"}></div>
                     </div> }
 
-                    { error && <p>{error}</p> }
+                    { error && <p className='inputError'>{error}</p> }
 
                     { venues && <Venues venues={venues} /> }
                 </div>

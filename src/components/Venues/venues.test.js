@@ -33,6 +33,17 @@ describe("Venue Component :: ", () => {
         ).not.toBe(null);
     });
 
+    it("should render with Sorry message", () => {
+
+        // Act
+        const component = mount(
+            <Venues venues={undefined} />
+        );
+
+        // Assert
+        expect(component).toMatchSnapshot();
+    });
+
     it("should render two items", () => {
 
         let venues = [
@@ -47,18 +58,15 @@ describe("Venue Component :: ", () => {
         // snapshot
         expect(component).toMatchSnapshot();
 
-
         // Act
         component = mount(
             <Venues venues={venues} />
         );
-        expect((component).prop('venues')).not.toEqual(null);
 
-        // class check
+        // Assert
+        expect((component).prop('venues')).not.toEqual(null);
         expect(component.find('li').first().text()).toEqual('taco bell  El Paso venue');
         expect(component.find('li').last().text()).toEqual('taco bell-2  El Paso venue2');
-
-
     });
 
 });
